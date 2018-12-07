@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,600');
+
+body {
+    padding: 56px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+}
+
+
+/* ------ hero ------ */
+
+.display-3 {
+    letter-spacing: -0.1rem;
+    font-weight: 200;
+}
+
+.lead {
+    font-size: 1rem;
+    font-weight: 300;
+    width: 50%;
+}
+
+@media (max-width: 767.98px) {
+    .lead {
+        font-size: 1rem;
+        font-weight: 300;
+        width: 75%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .lead {
+        font-size: 1rem;
+        font-weight: 300;
+        width: 100%;
+    }
+}
+
+@media (min-width: 576px) {
+    .jumbotron {
+        padding: 9rem 2rem;
+        background-image: url("images/hero-image.png");
+    }
+}
+
+@media (max-width: 575.98px) {
+    .jumbotron {
+        padding: 2rem 1rem;
+        background-image: url("images/hero-image.png");
+    }
+}
+
+
+/* ------ buttons ------ */
+
+.btn-group-lg>.btn, .btn-lg {
+    font-size: 1.15rem;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #30ba9f;
+    border-color: #30ba9f;
+}
+
+.btn-primary:hover {
+    background-color: #30ba9f;
+    border-color: #30ba9f;
+}
+
+.btn-primary:active {
+    background-color: #30ba9f;
+    border-color: #30ba9f;
+}
+
+
+/* ------ fonts ------ */
+
+h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.08rem;
+}
+
+ion-icon {
+    color: #30ba9f;
+}
+
+
+/* ------ homepage section - create, share, interact ------ */
+
+.col-lg-4 > .icon-left {
+    float: left;
+}
+
+.col-lg-4 > .description-left {
+    padding-left: 50px;
+}
+
+.card-title {
+    margin-bottom: .5rem;
+}
+
+.col-lg-4 {
+    margin-bottom: 1.5rem;
+}
