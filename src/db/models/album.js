@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
 
     var Album = sequelize.define('Album', {
         title: DataTypes.STRING,
-/*         image: DataTypes.BINARY */
+        albumUrl: DataTypes.STRING
     }, {});
     
     Album.associate = function(models) {

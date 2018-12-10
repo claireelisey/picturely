@@ -14,9 +14,9 @@ module.exports = {
             title: {
                 type: Sequelize.STRING
             },
-            /* image: {
-                type: Sequelize.BINARY
-            }, */
+            albumUrl: {
+                type: Sequelize.STRING
+            },
             createdAt: {
                 allowNull: false,
                 type: Sequelize.DATE
