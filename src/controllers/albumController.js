@@ -1,7 +1,15 @@
+const albumQueries = require("../db/queries.albums.js");
+
 module.exports = {
 
     index(req, res, next){
-        res.send("TODO: list all albums");
+        albumQueries.getAllAlbums((err, albums) => {
+            if(err){
+                res.redirect(500, "static/index");
+            } else {
+                res.render("albums/index", {albums});
+            }
+        })
     }
 
 }
