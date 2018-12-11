@@ -12,9 +12,11 @@ module.exports = {
                 type: Sequelize.INTEGER
             },
             title: {
+                allowNull: false,
                 type: Sequelize.STRING
             },
             albumUrl: {
+                allowNull: false,
                 type: Sequelize.STRING
             },
             createdAt: {

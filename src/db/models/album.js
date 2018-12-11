@@ -3,8 +3,14 @@
 module.exports = (sequelize, DataTypes) => {
 
     var Album = sequelize.define('Album', {
-        title: DataTypes.STRING,
-        albumUrl: DataTypes.STRING
+        title: {
+            allowNull: false,
+            type: Sequelize.STRING
+        },
+        albumUrl: {
+            allowNull: false,
+            type: Sequelize.STRING
+        }
     }, {});
     
     Album.associate = function(models) {
