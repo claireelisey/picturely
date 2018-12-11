@@ -12,10 +12,15 @@
 
             <h1>Albums</h1>
 
+            <a href="/albums/new" class="btn btn-success">New Album</a>
+
             <ul class="list-group">
                 <% albums.forEach((album) => { %>
                     <li class="list-group-item">
                         <a href="/albums/<%= album.id %>"> <%= album.title %> </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="/albums/<%= album.id %>"> <%= album.albumUrl %> </a>
                     </li>
                 <% }) %>
             </ul>
