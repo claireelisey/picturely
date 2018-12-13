@@ -16,7 +16,7 @@ module.exports = {
     addAlbum(newAlbum, callback){
         return Album.create({
             title: newAlbum.title,
-            albumUrl: newAlbum.albumUrl
+            image: newAlbum.image
         })
         .then((album) => {
             callback(null, album);

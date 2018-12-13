@@ -18,7 +18,7 @@
                 <% albums.forEach((album) => { %>
                     <li class="list-group-item">
                         <a href="/albums/<%= album.id %>"> <%= album.title %> </a>
-                        <p><%= album.albumUrl %></p>
+                        <img src="<%= album.image %>" style="max-height: 150px">
                     </li>
                 <% }) %>
             </ul>
