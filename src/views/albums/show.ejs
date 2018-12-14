@@ -12,7 +12,7 @@
         <main class="container">
             
             <h1><%= album.title %></h1>
-            <img src="<%= album.image %>">
+            <!-- <img src="<%= album.image %>" alt="Cover Image" style="max-height: 675px; border-radius: 15px;"> -->
 
             <a href="/albums/<%= album.id %>/edit" class="btn btn-warning">Edit</a>
             <form style="display:initial" action="/albums/<%= album.id %>/destroy" method="post">
