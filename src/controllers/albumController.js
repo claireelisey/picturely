@@ -24,24 +24,10 @@ module.exports = {
     },
 
     create(req, res, next){
-        let newAlbum = {
-            title: req.body.title,
-            image: req.body.image
-        };
-        albumQueries.addAlbum(newAlbum, (err, album) => {
-            if(err){
-                res.redirect(500, "/albums/new");
-            } else {
-                res.redirect(303, `/albums/${album.id}`);
-            }
-        });
-    },
-
-    /* create(req, res, next){
         cloudinary.uploader.upload(req.files.image.path, function(result) {
             let newAlbum = {
                 title: req.body.title,
-                image: req.body.image
+                image: result.url
             };
             albumQueries.addAlbum(newAlbum, (err, album) => {
                 if(err){
@@ -51,7 +37,7 @@ module.exports = {
                 }
             });
         });
-    }, */
+    }, 
 
     show(req, res, next){
         albumQueries.getAlbum(req.params.id, (err, album) => {

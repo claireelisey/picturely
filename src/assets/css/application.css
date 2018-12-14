@@ -73,13 +73,63 @@ body {
     border-color: #30ba9f;
 }
 
+.btn-success {
+    color: #fff;
+    background-color: #30ba9f;
+    border-color: #30ba9f;
+    margin-bottom: 1.5rem;
+}
+
+.btn-success:hover {
+    color: #fff;
+    background-color: #30ba9f;
+    border-color: #30ba9f;
+}
+
+.btn-success:active {
+    color: #fff;
+    background-color: #30ba9f;
+    border-color: #30ba9f;
+}
+
+
+/* ------ links ------ */
+
+a {
+    color: #343a40;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #30ba9f;
+    text-decoration: none;
+}
+
+a:active {
+    color: #30ba9f;
+    text-decoration: none;
+}
+
 
 /* ------ fonts ------ */
+
+h1 {
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
 
 h4 {
     font-size: 1.05rem;
     font-weight: 600;
-    letter-spacing: 0.08rem;
+    letter-spacing: 0.07rem;
+    margin-bottom: 0px;
+}
+
+h5 {
+    font-size: .9rem;
+    font-weight: 600;
+    letter-spacing: 0.07rem;
+    margin-bottom: 0px;
 }
 
 ion-icon {
@@ -120,4 +170,23 @@ ion-icon {
     border: none;
     border-radius: 0rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+/* ------ album image / title columns ------ */
+
+.list-group-item {
+    margin-top: 5px;
+    border: none;
+    padding: 0px;
+}
+
+.album-image-column {
+    float: left;
+    margin-right: 15px;
+}
+
+.album-title-column {
+    height: 55px;
+    padding: 10px;
 }
