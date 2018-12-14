@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <% include ../static/partials/head.ejs %>
+    </head>
+
+    <body>
+
+        <% include ../static/partials/navbar.ejs %>
+
+        <main class="container">
+
+            <h1>New Post</h1>
+
+            <form action="/albums/<%= albumId %>/posts/create" method="post">
+                <div class="form-group">
+                    <label for="caption">Caption</label>
+                    <input type="text" class="form-control" name="caption" aria-describedby="captionHelp" placeholder="Enter Caption">
+                </div>
+                <div class="form-group">
+                    <label for="image">Image</label>
+                    <input type="file" class="form-control-image" name="image" placeholder="Upload Image">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+        </main>
+
+        <% include ../static/partials/baseScripts.ejs %>
+
+    </body>
+
+</html>

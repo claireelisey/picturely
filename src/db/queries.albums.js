@@ -1,4 +1,5 @@
 const Album = require("./models").Album;
+const Post = require("./models").Post;
 
 module.exports = {
 
@@ -27,7 +28,12 @@ module.exports = {
     },
 
     getAlbum(id, callback){
-        return Album.findById(id)
+        return Album.findById(id, {
+            include: [{
+                model: Post,
+                as: "posts"
+            }]
+        })
         .then((album) => {
             callback(null, album);
         })

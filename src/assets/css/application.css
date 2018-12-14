@@ -77,7 +77,6 @@ body {
     color: #fff;
     background-color: #30ba9f;
     border-color: #30ba9f;
-    margin-bottom: 1.5rem;
 }
 
 .btn-success:hover {
@@ -175,6 +174,10 @@ ion-icon {
 
 /* ------ album image / title columns ------ */
 
+.list-group {
+    margin-top: 1.5rem;
+}
+
 .list-group-item {
     margin-top: 5px;
     border: none;
@@ -188,5 +191,15 @@ ion-icon {
 
 .album-title-column {
     height: 55px;
+    padding: 10px;
+}
+
+.post-image-column {
+    float: left;
+    margin-right: 15px;
+}
+
+.post-title-column {
+    height: 225px;
     padding: 10px;
 }

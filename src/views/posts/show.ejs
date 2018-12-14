@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <% include ../static/partials/head.ejs %>
+    </head>
+
+    <body>
+
+        <% include ../static/partials/navbar.ejs %>
+
+        <main class="container">
+
+            <img src="<%= post.image %>" alt="Post Image" style="width: 350px; height: 225px; object-fit: cover; border-radius: 15px;">
+            
+            <p><%= post.caption %></p>
+
+            <a href="/albums/<%= post.albumId %>/posts/<%= post.id %>/edit" class="btn btn-warning">Edit</a>
+            <form style="display:initial" action="/albums/<%= post.albumId %>/posts/<%= post.id %>/destroy" method="post">
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+
+        </main>
+
+        <% include ../static/partials/baseScripts.ejs %>
+
+    </body>
+
+</html>

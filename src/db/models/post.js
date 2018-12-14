@@ -2,8 +2,8 @@
 
 module.exports = (sequelize, DataTypes) => {
 
-    var Album = sequelize.define('Album', {
-        title: {
+    var Post = sequelize.define('Post', {
+        caption: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -11,17 +11,21 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
+        albumId: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        }
     }, {});
-    
-    Album.associate = function(models) {
 
-        Album.hasMany(models.Post, {
+    Post.associate = function(models) {
+
+        Post.belongsTo(models.Album, {
             foreignKey: "albumId",
-            as: "posts"
+            onDelete: "CASCADE"
         });
-
+        
     };
 
-    return Album;
-    
+    return Post;
+
 };
