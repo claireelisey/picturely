@@ -10,17 +10,20 @@
         <main class="container">
             <% include ../static/partials/navbar.ejs %>
 
-            <h1>Albums</h1>
+            <h1 id="h1-albums-page">Albums</h1>
 
             <a href="/albums/new" class="btn btn-success">New Album</a>
 
             <ul class="list-group">
                 <% albums.forEach((album) => { %>
                     <li class="list-group-item">
-                        <a href="/albums/<%= album.id %>"> <%= album.title %> </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="/albums/<%= album.id %>"> <%= album.albumUrl %> </a>
+                        <div class='album-image-column'>
+                            <img src="<%= album.image %>" alt="Cover Image" style="width: 80px; height: 55px; object-fit: cover; border-radius: 5px;">
+                        </div>
+                        <div class='album-title-column' style="display: table-cell; vertical-align: middle;">
+                            <h5><a href="/albums/<%= album.id %>"> <%= album.title %> </a></h5>
+                        </div>
+                        <hr>
                     </li>
                 <% }) %>
             </ul>

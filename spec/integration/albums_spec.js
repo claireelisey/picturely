@@ -12,7 +12,7 @@ describe("routes : albums", () => {
     
             Album.create({
                 title: "Bahama Trip 2018",
-                albumUrl: "https://wwww.cloudinary.com/image/upload/beachbums.jpg"
+                image: "https://wwww.cloudinary.com/image/upload/beachbums.jpg"
             })
             .then((album) => {
                 this.album = album;
@@ -58,7 +58,7 @@ describe("routes : albums", () => {
             url: `${base}create`,
             form: {
                 title: "Steamboat Springs 2018",
-                albumUrl: "https://wwww.cloudinary.com/image/upload/skifampic.jpg"
+                image: "https://wwww.cloudinary.com/image/upload/skifampic.jpg"
             }
         };
   
@@ -69,7 +69,7 @@ describe("routes : albums", () => {
                 .then((album) => {
                     expect(res.statusCode).toBe(303);
                     expect(album.title).toBe("Steamboat Springs 2018");
-                    expect(album.albumUrl).toBe("https://wwww.cloudinary.com/image/upload/skifampic.jpg");
+                    expect(album.image).toBe("https://wwww.cloudinary.com/image/upload/skifampic.jpg");
                     done();
                 })
                 .catch((err) => {
@@ -139,7 +139,7 @@ describe("routes : albums", () => {
                 url: `${base}${this.album.id}/update`,
                 form: {
                     title: "Steamboat Springs 2018",
-                    albumUrl: "https://wwww.cloudinary.com/image/upload/skifampic.jpg"
+                    image: "https://wwww.cloudinary.com/image/upload/skifampic.jpg"
                 }
             };
             request.post(options,

@@ -1,4 +1,11 @@
 const albumQueries = require("../db/queries.albums.js");
+const cloudinary = require('cloudinary');
+
+cloudinary.config({
+    cloud_name: process.env.CLOUD_NAME,
+    api_key: process.env.API_KEY,
+    api_secret: process.env.API_SECRET
+});
 
 module.exports = {
 
@@ -17,18 +24,20 @@ module.exports = {
     },
 
     create(req, res, next){
-        let newAlbum = {
-            title: req.body.title,
-            albumUrl: req.body.albumUrl
-        };
-        albumQueries.addAlbum(newAlbum, (err, album) => {
-            if(err){
-                res.redirect(500, "/albums/new");
-            } else {
-                res.redirect(303, `/albums/${album.id}`);
-            }
+        cloudinary.uploader.upload(req.files.image.path, function(result) {
+            let newAlbum = {
+                title: req.body.title,
+                image: result.url
+            };
+            albumQueries.addAlbum(newAlbum, (err, album) => {
+                if(err){
+                    res.redirect(500, "/albums/new");
+                } else {
+                    res.redirect(303, `/albums/${album.id}`);
+                }
+            });
         });
-    },
+    }, 
 
     show(req, res, next){
         albumQueries.getAlbum(req.params.id, (err, album) => {
