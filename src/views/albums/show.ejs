@@ -16,7 +16,7 @@
             <h1><%= album.title %></h1>
 
             <a href="/albums/<%= album.id %>/posts/new" class="btn btn-success">New Post</a>
-            <a href="/albums/<%= album.id %>/edit" class="btn btn-warning">Edit</a>
+            <!-- <a href="/albums/<%= album.id %>/edit" class="btn btn-warning">Edit</a> -->
             <form style="display:initial" action="/albums/<%= album.id %>/destroy" method="post">
                 <button type="submit" class="btn btn-danger">Delete</button>
             </form>

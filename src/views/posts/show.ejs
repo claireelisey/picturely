@@ -19,7 +19,7 @@
             
             <h5 class="post-caption-margin"><%= post.caption %></h5>
 
-            <a href="/albums/<%= post.albumId %>/posts/<%= post.id %>/edit" class="btn btn-warning">Edit</a>
+            <!-- <a href="/albums/<%= post.albumId %>/posts/<%= post.id %>/edit" class="btn btn-warning">Edit</a> -->
             <form style="display:initial" action="/albums/<%= post.albumId %>/posts/<%= post.id %>/destroy" method="post">
                 <button type="submit" class="btn btn-danger">Delete</button>
             </form>
