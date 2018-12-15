@@ -11,15 +11,15 @@
 
             <h1>Edit Album</h1>
 
-            <form action="/albums/<%= album.id %>/update" method="post">
+            <form action="/albums/<%= album.id %>/update" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="title">Album title</label>
                     <input value="<%= album.title %>" type="text" class="form-control" name="title" aria-describedby="titleHelp" placeholder="Enter Title">
                 </div>
+                <img src="<%= album.image %>" alt="Cover Image" style="width: 80px; height: 55px; object-fit: cover; border-radius: 5px;">
                 <div class="form-group">
-                    <label for="image">Cover Image</label>
-                    <!-- <textarea rows="4" class="form-control" name="image" placeholder="Enter URL"><%= album.image %></textarea> -->
-                    <input value="<%= album.image %>" type="file" class="form-control-image" name="image" placeholder="Upload Image">
+                    <label for="image">Cover image</label>
+                    <input type="file" class="form-control-image" name="image" placeholder="Upload Image">
                 </div>
                 <button type="submit" class="btn btn-primary">Update</button>
             </form>

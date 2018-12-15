@@ -4,11 +4,7 @@ const Album = require("./models").Album;
 module.exports = {
 
     addPost(newPost, callback){
-        return Album.create({
-            caption: newPost.caption,
-            image: newPost.image,
-            albumId: newPost.albumId
-        })
+        return Post.create(newPost)
         .then((post) => {
             callback(null, post);
         })

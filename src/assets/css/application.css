@@ -127,8 +127,18 @@ h4 {
 h5 {
     font-size: .9rem;
     font-weight: 600;
-    letter-spacing: 0.07rem;
+    letter-spacing: 0.05rem;
     margin-bottom: 0px;
+}
+
+h6 {
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: 0.02rem;
+}
+
+.post-caption-margin {
+    margin-bottom: 1.5rem;
 }
 
 ion-icon {
@@ -172,7 +182,7 @@ ion-icon {
 }
 
 
-/* ------ album image / title columns ------ */
+/* ------ album image / title columns on albums page ------ */
 
 .list-group {
     margin-top: 1.5rem;
@@ -194,12 +204,45 @@ ion-icon {
     padding: 10px;
 }
 
+
+/* ------ post image / caption columns on single album page ------ */
+
 .post-image-column {
     float: left;
     margin-right: 15px;
 }
 
-.post-title-column {
+.post-image-album-page{
+    width: 350px;
     height: 225px;
-    padding: 10px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+    .post-caption-column {
+        height: 225px;
+        padding: 10px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .post-image-album-page{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+    }
+}
+
+
+/* ------ post image on post page ------ */
+
+.post-image-responsive {
+    margin-top: 25px;
+    margin-bottom: 25px;
 }

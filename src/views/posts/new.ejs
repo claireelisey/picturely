@@ -13,7 +13,7 @@
 
             <h1>New Post</h1>
 
-            <form action="/albums/<%= albumId %>/posts/create" method="post">
+            <form action="/albums/<%= albumId %>/posts/create" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="caption">Caption</label>
                     <input type="text" class="form-control" name="caption" aria-describedby="captionHelp" placeholder="Enter Caption">

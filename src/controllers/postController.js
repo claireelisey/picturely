@@ -21,6 +21,7 @@ module.exports = {
                 albumId: req.params.albumId
             };
             postQueries.addPost(newPost, (err, post) => {
+                console.log(err);
                 if(err){
                     res.redirect(500, "/posts/new");
                 } else {

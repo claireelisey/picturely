@@ -12,7 +12,6 @@
         <main class="container">
             
             <h1><%= album.title %></h1>
-            <!-- <img src="<%= album.image %>" alt="Cover Image" style="max-height: 675px; border-radius: 15px;"> -->
 
             <a href="/albums/<%= album.id %>/posts/new" class="btn btn-success">New Post</a>
             <a href="/albums/<%= album.id %>/edit" class="btn btn-warning">Edit</a>
@@ -20,22 +19,14 @@
                 <button type="submit" class="btn btn-danger">Delete</button>
             </form>
 
-            <hr>
-
-            <!-- <h1>Posts</h1> -->
-
             <ul class="list-group">
                 <% album.posts.forEach((post) => { %>
-                    <!-- <li class="list-group-item">
-                        <img src="<%= post.image %>" alt="Post Image" style="width: 80px; height: 55px; object-fit: cover; border-radius: 5px;">
-                        <a href="/albums/<%= album.id %>/posts/<%= post.id %>"> <%= post.title %> </a>
-                    </li> -->
                     <li class="list-group-item">
                         <div class='post-image-column'>
-                            <img src="<%= post.image %>" alt="Post Image" style="width: 350px; height: 225px; object-fit: cover; border-radius: 15px;">
+                            <img src="<%= post.image %>" alt="Post Image" class="post-image-album-page">
                         </div>
-                        <div class='post-caption-column' style="display: table-cell; vertical-align: middle;">
-                            <a href="/albums/<%= album.id %>/posts/<%= post.id %>"> <%= post.caption %> </a>
+                        <div class='post-caption-column'>
+                            <h6><a href="/albums/<%= album.id %>/posts/<%= post.id %>"> <%= post.caption %> </a></h6>
                         </div>
                         <hr>
                     </li>
