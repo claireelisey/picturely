@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <% include ../static/partials/head.ejs %>
+    </head>
+
+    <body>
+
+        <% include ../static/partials/navbar.ejs %>
+
+        <main class="container">
+
+            <% include ../static/partials/messages.ejs %>
+
+            <h1>Welcome to Picturely</h1>
+
+            <p>Please complete the form below to sign up and start sharing!</p>
+
+            <form action="/users" method="post">
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small class="text-muted" id="emailHelp">email address must be a valid address</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" placeholder="Enter Username" aria-describedby="usernameHelp" class="form-control"/>
+                    <small class="text-muted" id="passwordHelp">username must be at least 4 characters long</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="password" aria-describedby="passwordHelp" placeholder="Enter password">
+                    <small class="text-muted" id="passwordHelp">password must be at least 6 characters long</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="passwordConfirmation">Password confirmation</label>
+                    <input type="password" class="form-control" name="passwordConfirmation" aria-describedby="passwordConfirmationHelp" placeholder="Enter password confirmation">
+                    <small class="text-muted" id="passwordConfirmationHelp">password must match confirmation above</small>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Sign up</button>
+            </form>
+
+        </main>
+
+        <% include ../static/partials/baseScripts.ejs %>
+
+    </body>
+
+</html>

@@ -11,12 +11,15 @@
 
         <main class="container">
 
+            <% include ../static/partials/messages.ejs %>
+
             <h1>New Post</h1>
 
             <form action="/albums/<%= albumId %>/posts/create" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="caption">Caption</label>
                     <input type="text" class="form-control" name="caption" aria-describedby="captionHelp" placeholder="Enter Caption">
+                    <small class="text-muted" id="captionHelp">caption must be at least 1 or more characters in length.</small>
                 </div>
                 <div class="form-group">
                     <label for="image">Image</label>
